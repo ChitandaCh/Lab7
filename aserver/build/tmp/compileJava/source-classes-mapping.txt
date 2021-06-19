@@ -1,0 +1,66 @@
+com/company/Managers/TicketManager.java
+ com.company.Managers.TicketManager
+com/company/Models/TicketType.java
+ com.company.Models.TicketType
+com/company/Validator.java
+ com.company.Validator
+com/company/Models/Coordinates.java
+ com.company.Models.Coordinates
+com/company/Models/Responce.java
+ com.company.Models.Responce
+com/company/Helper/Printer.java
+ com.company.Helper.Printer
+com/company/Helper/Logger.java
+ com.company.Helper.Logger
+com/company/Models/VenueType.java
+ com.company.Models.VenueType
+com/company/Models/Venue.java
+ com.company.Models.Venue
+com/company/Models/Ticket.java
+ com.company.Models.Ticket
+com/company/Managers/CommandManager.java
+ com.company.Managers.CommandManager
+com/company/Commands/Remove_first.java
+ com.company.Commands.Remove_first
+com/company/Commands/Empty.java
+ com.company.Commands.Empty
+com/company/Commands/Update_by_id.java
+ com.company.Commands.Update_by_id
+com/company/Command.java
+ com.company.Command
+com/company/Commands/Show.java
+ com.company.Commands.Show
+com/company/Main.java
+ com.company.Main
+com/company/Models/user.java
+ com.company.Models.user
+com/company/Commands/Register.java
+ com.company.Commands.Register
+com/company/Commands/Remove_lower.java
+ com.company.Commands.Remove_lower
+com/company/DataBase.java
+ com.company.DataBase
+com/company/Commands/Group_counting_by_coordinates.java
+ com.company.Commands.Group_counting_by_coordinates
+com/company/Commands/Print_field_descending_type.java
+ com.company.Commands.Print_field_descending_type
+com/company/Commands/Remove_all_by_venue.java
+ com.company.Commands.Remove_all_by_venue
+com/company/Helper/Parser.java
+ com.company.Helper.Parser
+com/company/Commands/Add.java
+ com.company.Commands.Add
+com/company/Commands/Remove_by_id.java
+ com.company.Commands.Remove_by_id
+com/company/Commands/Clear.java
+ com.company.Commands.Clear
+com/company/Commands/Execute_script.java
+ com.company.Commands.Execute_script
+com/company/Commands/Help.java
+ com.company.Commands.Help
+com/company/Commands/Save.java
+ com.company.Commands.Save
+com/company/Commands/Head.java
+ com.company.Commands.Head
+com/company/Commands/Info.java
+ com.company.Commands.Info
