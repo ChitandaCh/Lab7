@@ -31,7 +31,6 @@ public class Main {
 
     public static ArrayDeque<Ticket> tickets = new ArrayDeque<>();
     public static LocalDateTime start;
-    public static String path = "C:\\file.txt";
     public static Thread client = new Thread(Main::console);
     public static TicketManager manager = new TicketManager();
     public static Logger logger = new Logger();

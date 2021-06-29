@@ -2,11 +2,13 @@ package com.company.Managers;
 
 
 import com.company.Models.*;
+import com.company.Validation;
 import com.company.Validator;
 
-public class TicketManager implements Validator {
+public class TicketManager {
     public static Long ids = (long)-1;
     public static Long ids_venue = (long)-1;
+    public static Validator validator = new Validation();
 
     public static Long getIds() {
         ids++;
@@ -59,19 +61,19 @@ public class TicketManager implements Validator {
     public Ticket get_ticket(){
 
         String name = TicketManager.getString("name");
-        while (validationName(name)) {
+        while (validator.validationName(name)) {
             com.company.Helper.Printer.InvalidValue();
             name = TicketManager.getString("name");
         }
 
         int price = TicketManager.getInt("price");
-        while (validationPrice(price)) {
+        while (validator.validationPrice(price)) {
             com.company.Helper.Printer.InvalidValue();
             price = TicketManager.getInt("price");
         }
 
         int discount = TicketManager.getInt("discount");
-        while (validationDiscount(discount)) {
+        while (validator.validationDiscount(discount)) {
             com.company.Helper.Printer.InvalidValue();
             discount = TicketManager.getInt("discount");
         }
@@ -98,13 +100,13 @@ public class TicketManager implements Validator {
         com.company.Helper.Printer.WriteLine("Вводится coordinate");
 
         int x = TicketManager.getInt("X");
-        while (validationX(x)) {
+        while (validator.validationX(x)) {
             com.company.Helper.Printer.InvalidValue();
             x = TicketManager.getInt("X");
         }
 
         long y = TicketManager.getLong("Y");
-        while (validationY(y)) {
+        while (validator.validationY(y)) {
             com.company.Helper.Printer.InvalidValue();
             y = TicketManager.getLong("Y");
         }
@@ -112,13 +114,13 @@ public class TicketManager implements Validator {
         com.company.Helper.Printer.WriteLine("Вводится Venue");
 
         String name1 = TicketManager.getString("name");
-        while (validationName(name1)) {
+        while (validator.validationName(name1)) {
             com.company.Helper.Printer.InvalidValue();
             name1 = TicketManager.getString("name");
         }
 
         int capacity = TicketManager.getInt("capacity");
-        while (validationCapacity(capacity)) {
+        while (validator.validationCapacity(capacity)) {
             com.company.Helper.Printer.InvalidValue();
             capacity = TicketManager.getInt("capacity");
         }
@@ -148,13 +150,13 @@ public class TicketManager implements Validator {
         com.company.Helper.Printer.WriteLine("Вводится Venue");
 
         String name1 = TicketManager.getString("name");
-        while (validationName(name1)) {
+        while (validator.validationName(name1)) {
             com.company.Helper.Printer.InvalidValue();
             name1 = TicketManager.getString("name");
         }
 
         int capacity = TicketManager.getInt("capacity");
-        while (validationCapacity(capacity)) {
+        while (validator.validationCapacity(capacity)) {
             com.company.Helper.Printer.InvalidValue();
             capacity = TicketManager.getInt("capacity");
         }
@@ -180,22 +182,5 @@ public class TicketManager implements Validator {
         }
         return new Venue(name1, capacity, type1);
     }
-    public boolean validationY(long y) {
-        return y > 292;
-    }
-    public boolean validationX(int x){
-        return false;
-    }
-    public boolean validationName(String s){
-        return s == null || s.equals("");
-    }
-    public boolean validationPrice(int x){
-        return x <= 0;
-    }
-    public boolean validationDiscount(int x){
-        return x <= 0 || x > 100;
-    }
-    public boolean validationCapacity(int x){
-        return x <= 0;
-    }
+
 }
